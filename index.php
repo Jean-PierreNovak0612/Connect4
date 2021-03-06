@@ -20,7 +20,7 @@
 <body class="container-fluid">
     <main>
             <!-- This is the code for the start menu -->
-            <section class="w-75 mx-auto text-center my-5">
+            <section class="w-75 mx-auto text-center my-5 menu">
 
                 <!-- The name of the application and game -->
                 <h1>Connect 4</h1>
@@ -39,9 +39,5 @@
             </section>
     </main>
 </body>
-<?php
-
-    // Including the footer file
-    include_once "inc/footer.php";
-?>
+<script src="assets/js/transition.js"></script>
 </html>
