@@ -1,19 +1,39 @@
+<?php
+
+    // Defining the variable that will allow us to load the other files
+    define("__CONFIG__", true);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <?php
+
+        // Including the header file
+        include_once "inc/header.php";
+
+    ?>
     <title>Document</title>
 </head>
+
+<!-- This page is manly here to switch between templates -->
 <body class="container-fluid">
     <main>
+
+        <!-- This is the container for the start menu template -->
         <section class="StartMenu w-75 mx-auto">
             <?php
+
+                // Including the file with the start menu
                 include_once "templates/StartingMenu.php";
+
             ?>
         </div>
     </main>
 </body>
+<?php
+
+    // Including the footer file
+    include_once "inc/footer.php";
+?>
 </html>
