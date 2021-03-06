@@ -1,9 +1,3 @@
-<?php
-
-    // Defining the variable that will allow us to load the other files
-    define("__CONFIG__", true);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

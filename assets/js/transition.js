@@ -6,6 +6,6 @@ $(document).on('click', 'button.friend', function(event){
 
     // After 1100s relocate the players to the name entry page
     setTimeout(function(){
-        window.location.href = 'subpages/playerNames.php';
+        window.location.href = 'subpages/playersOptions.php';
     }, 1100 );
 })
