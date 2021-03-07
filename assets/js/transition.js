@@ -9,3 +9,14 @@ $(document).on('click', 'button.friend', function(event){
         window.location.href = 'subpages/playersOptions.php';
     }, 1100 );
 })
+// Clicking on the "Start game!" button the players menu will fade out and the game board will appear
+.on('click', 'button.multiplay', function(event){
+
+    // After button has been pressed, fade the players menu out
+    $('main').fadeOut(1000);
+
+    // After players menu has faded out, relocate the players to the game board
+    setTimeout(function(){
+        // window.location.href = 'gameBoard.php';
+    })
+})
