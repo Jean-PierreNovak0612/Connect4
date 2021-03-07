@@ -7,7 +7,8 @@
         include_once "../inc/header.php";
 
     ?>
-    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/colors.css">
+    <title>Players menu</title>
 </head>
 
 <!-- This page is manly here to switch between templates -->
@@ -37,10 +38,10 @@
                 <!-- Creating color selection palet -->
                 <h4 class="text-start w-100 mt-5 mb-2">Select your chip color:</h4>
                 <section class="p-3 mt-3"> 
-                    <button id="blue" class="color1 rounded-circle btn"></button>
-                    <button id="red" class="color1 rounded-circle btn active1"></button>
-                    <button id="yellow" class="color1 rounded-circle btn "></button>
-                    <button id="green" class="color1 rounded-circle btn "></button>
+                    <button class="color1 rounded-circle btn blue mx-1 my-1">blue</button>
+                    <button  class="color1 rounded-circle btn active1 red mx-1 my-1">red</button>
+                    <button class="color1 rounded-circle btn yellow mx-1 my-1">yellow</button>
+                    <button class="color1 rounded-circle btn green mx-1 my-1">green</button>
                 </section>
 
                 <!-- Setting the ready button -->
@@ -57,10 +58,10 @@
                 <!-- Creating color selection palet -->
                 <h4 class="text-start w-100 mt-5 mb-2">Select your chip color:</h4>
                 <section class="p-3 mt-3"> 
-                    <button id="blue" class="color2 rounded-circle btn "></button>
-                    <button id="red" class="color2 rounded-circle btn "></button>
-                    <button id="yellow" class="color2 rounded-circle btn active2"></button>
-                    <button id="green" class="color2 rounded-circle btn "></button>
+                    <button class="color2 rounded-circle btn blue mx-1 my-1">blue</button>
+                    <button class="color2 rounded-circle btn red mx-1 my-1">red</button>
+                    <button class="color2 rounded-circle btn active2 yellow mx-1 my-1">yellow</button>
+                    <button class="color2 rounded-circle btn green mx-1 my-1">green</button>
                 </section>
 
                 <!-- Setting the ready button -->
@@ -71,7 +72,7 @@
         </section>
 
         <!-- Button that allowes to start the game only when both players are ready -->
-        <button id="startmultiply" class="multiplay btn mt-5 border-3 border-dark rounded-pill py-2 px-5" disabled>Start game!</button>
+        <button id="startmultiply" class="multiplay btn mt-5 border-3 border-dark rounded-pill py-2 px-5 mb-5 btn-danger" disabled>Start game!</button>
     </main>
 </body>
 <script src="../assets/js/transition.js"></script>

@@ -1,0 +1,36 @@
+.color1, .color2{
+    width: 100px;
+    height: 100px;
+}
+
+.blue{
+    color: blue;
+    background-color: blue;
+}
+.blue:hover{
+    color:blue;
+}
+.red{
+    color: red;
+    background-color: red;
+}
+.red:hover{
+    color:red;
+}
+.yellow{
+    color: yellow;
+    background-color: yellow;
+}
+.yellow:hover{
+    color:yellow;
+}
+.green{
+    color: green;
+    background-color: green;
+}
+.green:hover{
+    color:green;
+}
+.active1, .active2{
+    border: 3px solid #333;
+}

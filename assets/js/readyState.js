@@ -44,8 +44,12 @@ $(document).on('click', 'button.ready', function(event){
     // Enableing the start button if both players are ready
     if(firstState && secondState){
         $('#startmultiply').prop('disabled', false);
+        $('#startmultiply').addClass('btn-success');
+        $('#startmultiply').removeClass('btn-danger');
     }
     else{
         $('#startmultiply').prop('disabled', true);
+        $('#startmultiply').removeClass('btn-success');
+        $('#startmultiply').addClass('btn-danger');
     }
 })
