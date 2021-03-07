@@ -38,10 +38,10 @@
                 <!-- Creating color selection palet -->
                 <h4 class="text-start w-100 mt-5 mb-2">Select your chip color:</h4>
                 <section class="p-3 mt-3"> 
-                    <button class="color1 rounded-circle btn blue mx-1 my-1">blue</button>
-                    <button  class="color1 rounded-circle btn active1 red mx-1 my-1">red</button>
-                    <button class="color1 rounded-circle btn yellow mx-1 my-1">yellow</button>
-                    <button class="color1 rounded-circle btn green mx-1 my-1">green</button>
+                    <button class="color1 rounded-circle btn blue mx-1 my-1" value="blue"></button>
+                    <button  class="color1 rounded-circle btn active1 red mx-1 my-1" value="red">/button>
+                    <button class="color1 rounded-circle btn yellow mx-1 my-1" disabled value="yellow"></button>
+                    <button class="color1 rounded-circle btn green mx-1 my-1" value="green"></button>
                 </section>
 
                 <!-- Setting the ready button -->
@@ -58,10 +58,10 @@
                 <!-- Creating color selection palet -->
                 <h4 class="text-start w-100 mt-5 mb-2">Select your chip color:</h4>
                 <section class="p-3 mt-3"> 
-                    <button class="color2 rounded-circle btn blue mx-1 my-1">blue</button>
-                    <button class="color2 rounded-circle btn red mx-1 my-1">red</button>
-                    <button class="color2 rounded-circle btn active2 yellow mx-1 my-1">yellow</button>
-                    <button class="color2 rounded-circle btn green mx-1 my-1">green</button>
+                    <button class="color2 rounded-circle btn blue mx-1 my-1" value="blue"></button>
+                    <button class="color2 rounded-circle btn red mx-1 my-1" disabled value="red"></button>
+                    <button class="color2 rounded-circle btn active2 yellow mx-1 my-1" value="yellow"></button>
+                    <button class="color2 rounded-circle btn green mx-1 my-1" value="green"></button>
                 </section>
 
                 <!-- Setting the ready button -->
@@ -77,4 +77,5 @@
 </body>
 <script src="../assets/js/transition.js"></script>
 <script src="../assets/js/readyState.js"></script>
+<script src="../assets/js/colorSelection.js"></script>
 </html>
