@@ -24,8 +24,9 @@
 
             <!-- Selecting who goes first -->
             <section class="firstTurn w-100 py-2 mt-3">
-                <button class="btn ply1 w-25 goesFirst">Player1</button>
-                <button class="btn ply2 w-25">Player2</button>
+                <h3 class="plyGoesFirst">Select who goes first</h3>
+                <button id="ply1" class="btn selectWhoGoesFirst w-25 goesFirst">Player1</button>
+                <button id="ply2" class="btn selectWhoGoesFirst w-25">Player2</button>
             </section>
 
             <!-- This section will contain the menu options -->
@@ -52,7 +53,7 @@
             <section class="mt-5 pt-5 w-25 ms-5 d-inline-block text-start">
 
                 <!-- Creating the options field for the first player -->
-                <label for="ply1name" class="form-label">Enter name for player 2:</label>
+                <label for="ply2name" class="form-label">Enter name for player 2:</label>
                 <input type="text" class="form-control">
 
                 <!-- Creating color selection palet -->
@@ -78,4 +79,5 @@
 <script src="../assets/js/transition.js"></script>
 <script src="../assets/js/readyState.js"></script>
 <script src="../assets/js/colorSelection.js"></script>
+<script src="../assets/js/setPlayerToGoFirst.js"></script>
 </html>
