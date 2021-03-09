@@ -34,14 +34,14 @@
             <section class="mt-5 pt-5 me-5 w-25 d-inline-block text-start">
 
                 <!-- Creating the options field for the first player -->
-                <label for="ply1name" class="form-label">Enter name for player 1:</label>
+                <label for="ply1name" class="form-label" required='required'>Enter name for player 1:</label>
                 <input type="text" class="form-control">
 
                 <!-- Creating color selection palet -->
                 <h4 class="text-start w-100 mt-5 mb-2">Select your chip color:</h4>
                 <section class="p-3 mt-3"> 
                     <button class="color1 rounded-circle btn blue mx-1 my-1" value="blue"></button>
-                    <button  class="color1 rounded-circle btn active1 red mx-1 my-1" value="red">/button>
+                    <button  class="color1 rounded-circle btn active1 red mx-1 my-1" value="red"></button>
                     <button class="color1 rounded-circle btn yellow mx-1 my-1" disabled value="yellow"></button>
                     <button class="color1 rounded-circle btn green mx-1 my-1" value="green"></button>
                 </section>
@@ -55,7 +55,7 @@
 
                 <!-- Creating the options field for the first player -->
                 <label for="ply2name" class="form-label">Enter name for player 2:</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required='required'>
 
                 <!-- Creating color selection palet -->
                 <h4 class="text-start w-100 mt-5 mb-2">Select your chip color:</h4>
