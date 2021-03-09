@@ -43,7 +43,7 @@
         </section>
 
         <!-- Button that allowes to start the game only when both players are ready -->
-        <button id="startmultiply" class="multiplay btn mt-5 border-3 border-dark rounded-pill py-2 px-5 mb-5 btn-success">Start game!</button>
+        <button id="startmultiply" class="singleplay btn mt-5 border-3 border-dark rounded-pill py-2 px-5 mb-5 btn-success">Start game!</button>
     </main>
 </body>
 <script src="../assets/js/transition.js"></script>
