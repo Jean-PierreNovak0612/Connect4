@@ -12,7 +12,7 @@
         <h3>It is <span></span>'s turn</h3>
     </section>
     <section class="w-100">
-        <table class="w-75 mx-auto border border-3 border-dark">
+        <table class="w-50 mx-auto border border-3 border-dark">
             <?php for($i=0; $i<6; $i++) : ?>
                 <tr>
                     <?php for($j=0; $j<7; $j++) : ?>
