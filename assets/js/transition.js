@@ -6,7 +6,7 @@ $(document).on('click', 'button.friend', function(){
 
     // After 1100s relocate the players to the name entry page
     setTimeout(function(){
-        window.location.href = 'subpages/playersOptions.php';
+        window.location.href = 'subpages/playersOptions.php?multy';
     }, 1100 );
 })
 // Clicking on the button with the class 'AI' will relocate the player to the player option menu
@@ -16,7 +16,7 @@ $(document).on('click', 'button.friend', function(){
 
     // After 1100s relocate the players to the name entry page
     setTimeout(function(){
-        window.location.href = 'subpages/playerOptions.php';
+        window.location.href = 'subpages/playersOptions.php?single';
     }, 1100 );
 })
 // Clicking on the "Start game!" (for multiplayer) button the players menu will fade out and the game board will appear
