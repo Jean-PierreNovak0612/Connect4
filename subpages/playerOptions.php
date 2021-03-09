@@ -9,7 +9,7 @@
     ?>
     <link rel="stylesheet" href="../assets/css/colors.css">
     <link rel="stylesheet" href="../assets/css/whoGoesFirst.css">
-    <title>Players menu</title>
+    <title>Player menu</title>
 </head>
 
 <!-- This page is manly here to switch between templates -->
