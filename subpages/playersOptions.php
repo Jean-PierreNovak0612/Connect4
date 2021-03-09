@@ -32,8 +32,13 @@
                 </section>
             <?php endif ?>
 
-            <!-- This section will contain the menu options -->
-            <section class="mt-5 pt-5 me-5 w-25 d-inline-block text-start">
+            <?php if(isset($_GET['multy'])) : ?>
+                <!-- This section will contain the menu options -->
+                <section class="mt-5 pt-5 me-5 w-25 d-inline-block text-start">
+            <?php else : ?>
+                <!-- This section will contain the menu options -->
+                <section class="mt-5 pt-5 me-5 w-50 d-inline-block text-start">
+            <?php endif ?>
 
                 <!-- Creating the options field for the first player -->
                 <label for="ply1name" class="form-label" required='required'>Enter name for player 1:</label>
