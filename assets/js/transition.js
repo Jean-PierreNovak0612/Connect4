@@ -27,8 +27,8 @@ $(document).on('click', 'button.friend', function(){
 
     // After players menu has faded out, relocate the players to the game board
     setTimeout(function(){
-        // window.location.href = 'gameBoardMulty.php';
-    })
+        window.location.href = 'gameBoard.php?multy';
+    }, 1100)
 })
 // Clicking on the "Start game!" (for singleplayer) button the player menu will fade out and the game board will appear
 .on('click', 'button.singleplay', function(){
@@ -38,6 +38,6 @@ $(document).on('click', 'button.friend', function(){
 
     // After players menu has faded out, relocate the players to the game board
     setTimeout(function(){
-        // window.location.href = 'gameBoardSingle.php';
-    })
+        window.location.href = 'gameBoard.php?single';
+    }, 1100)
 })
