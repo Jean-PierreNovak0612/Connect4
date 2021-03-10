@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/gameboard.css">
 </head>
 <body>
-    <section class="w-100 text-center my-5">
+    <section class="w-100 text-center mt-5 mb-3">
         <h3>It is <span></span>'s turn</h3>
     </section>
     <section class="w-100">
@@ -16,9 +16,9 @@
             <?php for($i=0; $i<6; $i++) : ?>
                 <tr>
                     <?php for($j=0; $j<7; $j++) : ?>
-                        <th class="text-center">
+                        <td class="text-center p-2">
                             <button id="<?php echo $i; echo $j; ?>" class="btn enterChip rounded-circle border-3 border-dark"></button>
-                        </th>
+                        </td>
                     <?php endfor ?>
                 </tr>
             <?php endfor ?>
