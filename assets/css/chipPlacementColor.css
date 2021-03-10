@@ -1,0 +1,12 @@
+.red{
+    background: radial-gradient(rgb(255, 0, 0) 0%, rgb(255, 0, 0) 40%, rgb(124, 2, 2) 100%);
+}
+.yellow{
+    background: radial-gradient(rgb(255, 255, 0) 0%, rgb(255, 255, 0) 40%, rgb(124, 124, 0) 100%);
+}
+.blue{
+    background: radial-gradient(rgb(0, 0, 255) 0%, rgb(0, 0, 255) 40%, rgb(0, 0, 124) 100%);
+}
+.green{
+    background: radial-gradient(rgb(0, 255, 0) 0%, rgb(0, 255, 0) 40%, rgb(0, 124, 0) 100%);
+}

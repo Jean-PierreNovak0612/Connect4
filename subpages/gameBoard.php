@@ -6,6 +6,7 @@
     ?>
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/gameboard.css">
+    <link rel="stylesheet" href="../assets/css/chipPlacementColor.css">
 </head>
 <body>
     <section class="w-100 text-center mt-5 mb-3">
