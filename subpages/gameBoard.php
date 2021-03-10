@@ -25,6 +25,10 @@
             <?php endfor ?>
         </table>
     </section>
-    <script src="../assets/js/chipPlacement.js"></script>
+    <?php if(isset($_GET['single'])) : ?>
+        <script src="../assets/js/functions/singleplayer.js"></script>
+        <script src="../assets/js/chipPlacement.js"></script>
+    <?php else : ?>
+    <?php endif ?>
 </body>
 </html>

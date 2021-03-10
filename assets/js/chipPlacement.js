@@ -1,25 +1,15 @@
-var playerTurn = true;
+var notFull = [0, 1, 2, 3, 4, 5, 6];
 $(document).on('click', 'button.enterChip', function(){
     var id = $(this).attr('id');
     var j = id%10;
-    var color;
-    if(playerTurn){
-        color = localStorage.getItem('ply1Color');
-    }
-    else{
-        color = 'yellow';
-    }
     var cls = 'btn enterChip rounded-circle border-3 border-dark';
-    for(i=5; i>=0; i--){
-        id=i*10+j;
-        if($('#'+id).attr('class') == 'btn enterChip rounded-circle border-3 border-dark'){
-            $('#'+id).removeClass('enterChip');
-            $('#'+id).addClass(color);
+    var color = localStorage.getItem('ply1Color');
+    setPlayerChip(color, j);
+    setAIChip(notFull);
+    for(i=0; notFull.length; i++){
+        if($('#0'+notFull[i]).attr('class') != cls){
+            notFull.splice(i, 1);
             break;
-        }else if($('#0'+j).attr('class') == cls && $('#1'+j).attr('class') != cls){
-            $('#0'+j).removeClass('enterChip');
-            $('#0'+j).addClass(color);
         }
     }
-    playerTurn = !playerTurn;
 })
