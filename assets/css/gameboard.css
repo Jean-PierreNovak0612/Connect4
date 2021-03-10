@@ -1,8 +1,10 @@
 table{
     background-color: rgb(107, 22, 187)
 }
-.enterChip{
+td button{
     height: 70px;
     width: 70px;
+}
+.enterChip{
     background-color: #ddd;
 }

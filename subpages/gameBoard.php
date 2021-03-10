@@ -24,6 +24,6 @@
             <?php endfor ?>
         </table>
     </section>
-    
+    <script src="../assets/js/chipPlacement.js"></script>
 </body>
 </html>
