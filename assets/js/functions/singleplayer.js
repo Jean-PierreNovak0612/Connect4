@@ -65,6 +65,12 @@ function checkRightDiagonal(){
                     $('#'+(i-s)+''+(j-s)).addClass('victory');
                     placed = true;
                 }
+                if(score == 4){
+                    $('#winner').text(localStorage.getItem('ply1Name'))
+                }
+                else{
+                    $('#winner').text('Computer')
+                }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
                     setTimeout(function(){
@@ -96,6 +102,12 @@ function checkLeftDiagonal(){
                         $('#'+(i-s)+''+(j+s)).addClass('victory');
                         placed = true;
                     }
+                    if(score == 4){
+                        $('#winner').text(localStorage.getItem('ply1Name'))
+                    }
+                    else{
+                        $('#winner').text('Computer')
+                    }
                     setTimeout(function(){
                         $('.gameboard').fadeOut(500);
                         setTimeout(function(){
@@ -126,6 +138,12 @@ function checkColumn(){
                 for(s=j; s<(j+4); s++){
                     $('#'+s+''+i).addClass('victory');
                     placed = true;
+                }
+                if(score == 4){
+                    $('#winner').text(localStorage.getItem('ply1Name'))
+                }
+                else{
+                    $('#winner').text('Computer')
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
@@ -159,6 +177,12 @@ function checkRow(){
                 for(s=j; s<(j+4); s++){
                     $('#'+i+''+s).addClass('victory');
                     placed = true;
+                }
+                if(score == 4){
+                    $('#winner').text(localStorage.getItem('ply1Name'))
+                }
+                else{
+                    $('#winner').text('Computer')
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
