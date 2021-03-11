@@ -51,6 +51,48 @@ function CheckIfEmpty(notFull){
     }
     return notFull;
 }
+function leftDiagonalVictory(notFull){
+    var placed = false;
+    for(i=5;i>=3;i--){
+        for(j=0;j<4;j++){
+            var score = 0;
+            for(s=0; s<4;s++){
+                score += parseInt($('#'+(i-s)+''+(j+s)).val());
+            }
+            if(score == 3 || score == 15){
+                for(s=0;s<4;s++){
+                    if((i-s) == 5){
+                        if($('#'+(i-s)+''+(j+s)).val() == '0'){
+                            $('#'+(i-s)+''+(j+s)).removeClass('enterChip');
+                            $('#'+(i-s)+''+(j+s)).addClass('yellow');
+                            $('#'+(i-s)+''+(j+s)).val('5')
+                            placed = true;
+                            break
+                        }
+                    }
+                    else{
+                        if($('#'+(i-s)+''+(j+s)).val() == '0' && $('#'+(i-s+1)+''+(j+s)).val() != '0'){
+                            $('#'+(i-s)+''+(j+s)).removeClass('enterChip');
+                            $('#'+(i-s)+''+(j+s)).addClass('yellow');
+                            $('#'+(i-s)+''+(j+s)).val('5')
+                            placed = true;
+                            break
+                        }
+                    }
+                }
+            }
+            if(placed){
+                break;
+            }
+        }
+        if(placed){
+            break;
+        }
+    }
+    if(!placed){
+        setAIChip(notFull)
+    }
+}
 function columnVictory(notFull){
     placed = false;
     for(i=0; i<7; i++){
@@ -76,9 +118,9 @@ function columnVictory(notFull){
             }
         }
     }
-    // if(!placed){
-    //     leftDiagonalVictory(notFull)
-    // }
+    if(!placed){
+        leftDiagonalVictory(notFull)
+    }
 }
 function rowVictory(notFull){
     placed = false;
