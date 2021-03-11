@@ -18,7 +18,7 @@
                 <tr>
                     <?php for($j=0; $j<7; $j++) : ?>
                         <td class="text-center p-2">
-                            <button id="<?php echo $i; echo $j; ?>" class="btn enterChip rounded-circle border-3 border-dark" value='0'></button>
+                            <button id="<?php echo $i; echo $j; ?>" class="btn enterChip rounded-circle" value='0'></button>
                         </td>
                     <?php endfor ?>
                 </tr>

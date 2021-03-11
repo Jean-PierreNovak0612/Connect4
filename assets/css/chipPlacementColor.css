@@ -8,5 +8,8 @@
     background: radial-gradient(rgb(0, 0, 255) 0%, rgb(0, 0, 255) 40%, rgb(0, 0, 124) 100%);
 }
 .green{
-    background: radial-gradient(rgb(0, 255, 0) 0%, rgb(0, 255, 0) 40%, rgb(0, 124, 0) 100%);
+    background: radial-gradient(rgb(0, 128, 0) 0%, rgb(0, 128, 0) 40%, rgb(0, 77, 0) 100%);
+}
+.victory{
+    border: 5px solid rgb(197, 15, 197);
 }
