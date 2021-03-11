@@ -1,5 +1,5 @@
 var notFull = [0, 1, 2, 3, 4, 5, 6];
-$('span').text(localStorage.getItem('ply1Name'));
+$('#curPly').text(localStorage.getItem('ply1Name'));
 $(document).on('click', 'button.enterChip', function(){
     $('span').text(localStorage.getItem('ply1Name'));
     var id = $(this).attr('id');

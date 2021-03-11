@@ -65,6 +65,12 @@ function checkRightDiagonal(){
                     $('#'+(i-s)+''+(j-s)).addClass('victory');
                     placed = true;
                 }
+                setTimeout(function(){
+                    $('.gameboard').fadeOut(500);
+                    setTimeout(function(){
+                        $('.wpannel').fadeIn(500)
+                    }, 500)
+                },1000);
             }
             if(placed){
                 break;
@@ -90,7 +96,14 @@ function checkLeftDiagonal(){
                         $('#'+(i-s)+''+(j+s)).addClass('victory');
                         placed = true;
                     }
+                    setTimeout(function(){
+                        $('.gameboard').fadeOut(500);
+                        setTimeout(function(){
+                            $('.wpannel').fadeIn(500)
+                        }, 500)
+                    },1000);
                 }
+                
             }
             if(placed){
                 break;
@@ -114,6 +127,12 @@ function checkColumn(){
                     $('#'+s+''+i).addClass('victory');
                     placed = true;
                 }
+                setTimeout(function(){
+                    $('.gameboard').fadeOut(500);
+                    setTimeout(function(){
+                        $('.wpannel').fadeIn(500)
+                    }, 500)
+                },1000);
                 if(placed){
                     break;
                 }
@@ -141,6 +160,12 @@ function checkRow(){
                     $('#'+i+''+s).addClass('victory');
                     placed = true;
                 }
+                setTimeout(function(){
+                    $('.gameboard').fadeOut(500);
+                    setTimeout(function(){
+                        $('.wpannel').fadeIn(500)
+                    }, 500)
+                },1000);
                 if(placed){
                     break;
                 }
