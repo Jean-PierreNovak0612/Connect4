@@ -32,8 +32,10 @@
     </section>
     <?php if(isset($_GET['single'])) : ?>
         <script src="../assets/js/functions/singleplayer.js"></script>
-        <script src="../assets/js/chipPlacement.js"></script>
+        <script src="../assets/js/chipPlacementSingleply.js"></script>
     <?php else : ?>
+        <script src="../assets/js/functions/multyplayer.js"></script>
+        <script src="../assets/js/chipPlacementMultyply.js"></script>
     <?php endif ?>
     <script src="../assets/js/wpannelButtons.js"></script>
 </body>

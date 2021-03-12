@@ -1,4 +1,4 @@
-function setPlayerChip(color, j, score){
+function setPlayerChip(color, j){
     var cls = 'btn enterChip rounded-circle';
     for(i=5; i>=0; i--){
         id=(i*10)+j;
