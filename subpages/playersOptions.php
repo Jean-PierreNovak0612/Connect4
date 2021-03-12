@@ -57,7 +57,7 @@
 
                 <?php if(isset($_GET['multy'])) : ?>
                     <!-- Setting the ready button -->
-                    <button id="ply1Ready" class="btn-danger ready btn border-3 border-dark rounded-pill py-2 px-5 mx-3 mt-3">Not ready!</button>
+                    <button id="ply1Ready" class="btn-danger ready btn border-3 border-dark rounded-pill py-2 px-5 mx-3 mt-3" disabled>Not ready!</button>
                 <?php endif ?>
 
             </section>
@@ -79,7 +79,7 @@
                     </section>
 
                     <!-- Setting the ready button -->
-                    <button id="ply2Ready" class="btn-danger ready btn border-3 border-dark rounded-pill py-2 px-5 mx-3 mt-3">Not ready!</button>
+                    <button id="ply2Ready" class="btn-danger ready btn border-3 border-dark rounded-pill py-2 px-5 mx-3 mt-3" disabled>Not ready!</button>
 
                 </section>
             
