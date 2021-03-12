@@ -26,7 +26,7 @@
         </table>
     </section>
     <section class="w-50 mx-auto text-center mt-5 border border-3 border-dark rounded-3 p-5 wpannel" style="display: none">
-        <h1><span id="winner"></span> has won!</h1>
+        <h1 id='display'></h1>
         <button class="retry btn btn-success rounded-pill py-2 px-5 mt-5 mx-auto d-block">Replay</button>
         <button class="mainMenu btn btn-success rounded-pill py-2 px-5 mt-5 mx-auto d-block">Return to menu</button>
     </section>

@@ -51,6 +51,24 @@ function CheckIfEmpty(notFull){
     }
     return notFull;
 }
+function allFull(){
+    console.log('Got here')
+    var score = 0;
+    for(i=0; i<6; i++){
+        for(j=0; j<7; j++){
+            score += parseInt($('#'+i+''+j).val())
+        }
+    }
+    if(score == 126){
+        $('#display').text("It's a draw")
+        setTimeout(function(){
+            $('.gameboard').fadeOut(500);
+            setTimeout(function(){
+                $('.wpannel').fadeIn(500)
+            }, 500)
+        },1000);
+    } 
+}
 function checkRightDiagonal(){
     var placed = false;
     for(i=5;i>=3;i--){
@@ -66,10 +84,10 @@ function checkRightDiagonal(){
                     placed = true;
                 }
                 if(score == 4){
-                    $('#winner').text(localStorage.getItem('ply1Name'))
+                    $('#display').text(localStorage.getItem('ply1Name')+" has won!")
                 }
                 else{
-                    $('#winner').text('Computer')
+                    $('#display').text('Computer has won!')
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
@@ -103,10 +121,10 @@ function checkLeftDiagonal(){
                         placed = true;
                     }
                     if(score == 4){
-                        $('#winner').text(localStorage.getItem('ply1Name'))
+                        $('#display').text(localStorage.getItem('ply1Name')+" has won!")
                     }
                     else{
-                        $('#winner').text('Computer')
+                        $('#display').text('Computer has won!')
                     }
                     setTimeout(function(){
                         $('.gameboard').fadeOut(500);
@@ -140,10 +158,10 @@ function checkColumn(){
                     placed = true;
                 }
                 if(score == 4){
-                    $('#winner').text(localStorage.getItem('ply1Name'))
+                    $('#display').text(localStorage.getItem('ply1Name')+" has won!")
                 }
                 else{
-                    $('#winner').text('Computer')
+                    $('#winner').text('Computer has won!')
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
@@ -179,10 +197,10 @@ function checkRow(){
                     placed = true;
                 }
                 if(score == 4){
-                    $('#winner').text(localStorage.getItem('ply1Name'))
+                    $('#display').text(localStorage.getItem('ply1Name')+" has won!")
                 }
                 else{
-                    $('#winner').text('Computer')
+                    $('#display').text('Computer has won!')
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);

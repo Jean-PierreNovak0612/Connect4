@@ -16,14 +16,32 @@ function setPlayerChip(color, j, turn){
             $('#0'+j).removeClass('enterChip');
             $('#0'+j).addClass(color);
             if(turn){
-                $('#'+id).val('1')
+                $('#0'+j).val('1')
             }
             else{
-                $('#'+id).val('5')
+                $('#0'+j).val('5')
             }
             break
         }
     }
+}
+function allFull(){
+    console.log('Got here')
+    var score = 0;
+    for(i=0; i<6; i++){
+        for(j=0; j<7; j++){
+            score += parseInt($('#'+i+''+j).val())
+        }
+    }
+    if(score == 126){
+        $('#display').text("It's a draw")
+        setTimeout(function(){
+            $('.gameboard').fadeOut(500);
+            setTimeout(function(){
+                $('.wpannel').fadeIn(500)
+            }, 500)
+        },1000);
+    } 
 }
 function checkRightDiagonal(name1, name2){
     var placed = false;
@@ -40,10 +58,10 @@ function checkRightDiagonal(name1, name2){
                     placed = true;
                 }
                 if(score == 4){
-                    $('#winner').text(name1)
+                    $('#display').text(name1+" has won!")
                 }
                 else{
-                    $('#winner').text(name2)
+                    $('#display').text(name2+" has won!")
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
@@ -59,6 +77,9 @@ function checkRightDiagonal(name1, name2){
         if(placed){
             break;
         }
+    }
+    if(!placed){
+        allFull()
     }  
 }
 function checkLeftDiagonal(name1, name2){
@@ -77,10 +98,10 @@ function checkLeftDiagonal(name1, name2){
                         placed = true;
                     }
                     if(score == 4){
-                        $('#winner').text(name1)
+                        $('#display').text(name1+" has won!")
                     }
                     else{
-                        $('#winner').text(name2)
+                        $('#display').text(name2+" has won!")
                     }
                     setTimeout(function(){
                         $('.gameboard').fadeOut(500);
@@ -106,6 +127,7 @@ function checkColumn(name1, name2){
             var score = 0;
             for(s=j; s<(j+4); s++){
                 score += parseInt($('#'+s+''+i).val());
+                
             }
             if(score == 4 || score == 20){
                 $('.enterChip').prop('disabled', true)
@@ -114,10 +136,10 @@ function checkColumn(name1, name2){
                     placed = true;
                 }
                 if(score == 4){
-                    $('#winner').text(name1)
+                    $('#display').text(name1+" has won!")
                 }
                 else{
-                    $('#winner').text(name2)
+                    $('#display').text(name2+" has won!")
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
@@ -133,6 +155,9 @@ function checkColumn(name1, name2){
                 break
             }
         }
+        if(placed){
+            break
+        }
     }
     if(!placed){
         checkLeftDiagonal(name1, name2)
@@ -140,7 +165,7 @@ function checkColumn(name1, name2){
 }
 function checkRow(name1, name2){
     placed = false;
-    for(i=0; i<6; i++){
+    for(i=5; i>=0; i--){
         for(j=0; j<4; j++){
             var score = 0;
             for(s=j; s<(j+4); s++){
@@ -151,12 +176,13 @@ function checkRow(name1, name2){
                 for(s=j; s<(j+4); s++){
                     $('#'+i+''+s).addClass('victory');
                     placed = true;
+                    console.log($('#'+i+''+s).val())
                 }
                 if(score == 4){
-                    $('#winner').text(name1)
+                    $('#display').text(name1+" has won!")
                 }
                 else{
-                    $('#winner').text(name2)
+                    $('#disp').text(name2+" has won!")
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
@@ -164,9 +190,7 @@ function checkRow(name1, name2){
                         $('.wpannel').fadeIn(500)
                     }, 500)
                 },1000);
-                if(placed){
-                    break;
-                }
+                return;
             }
         }
     }
