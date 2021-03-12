@@ -1,36 +1,24 @@
 .color1, .color2{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 
 .blue{
-    color: blue;
-    background-color: blue;
-}
-.blue:hover{
-    color:blue;
+    background: radial-gradient(rgb(0, 0, 255) 0%, rgb(0, 0, 255) 20%, rgb(0, 0, 124) 100%);
+    border: 5px solid rgb(0, 0, 140)
 }
 .red{
-    color: red;
-    background-color: red;
-}
-.red:hover{
-    color:red;
+    background: radial-gradient(rgb(255, 0, 0) 0%, rgb(255, 0, 0) 20%, rgb(124, 2, 2) 100%);
+    border: 5px solid rgb(140, 0, 0)
 }
 .yellow{
-    color: yellow;
-    background-color: yellow;
-}
-.yellow:hover{
-    color:yellow;
+    background: radial-gradient(rgb(255, 255, 0) 0%, rgb(255, 255, 0) 20%, rgb(124, 124, 0) 100%);
+    border: 5px solid rgb(140, 140, 0)
 }
 .green{
-    color: green;
-    background-color: green;
-}
-.green:hover{
-    color:green;
+    background: radial-gradient(rgb(0, 128, 0) 0%, rgb(0, 128, 0) 20%, rgb(0, 77, 0) 100%);
+    border: 5px solid rgb(0, 80, 0)
 }
 .active1, .active2{
-    border: 3px solid #333;
+    border: 5px solid #333;
 }

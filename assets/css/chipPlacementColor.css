@@ -1,14 +1,18 @@
 .red{
-    background: radial-gradient(rgb(255, 0, 0) 0%, rgb(255, 0, 0) 40%, rgb(124, 2, 2) 100%);
+    background: radial-gradient(rgb(255, 0, 0) 0%, rgb(255, 0, 0) 20%, rgb(124, 2, 2) 100%);
+    border: 5px solid rgb(94, 20, 163)
 }
 .yellow{
-    background: radial-gradient(rgb(255, 255, 0) 0%, rgb(255, 255, 0) 40%, rgb(124, 124, 0) 100%);
+    background: radial-gradient(rgb(255, 255, 0) 0%, rgb(255, 255, 0) 20%, rgb(124, 124, 0) 100%);
+    border: 5px solid rgb(94, 20, 163)
 }
 .blue{
-    background: radial-gradient(rgb(0, 0, 255) 0%, rgb(0, 0, 255) 40%, rgb(0, 0, 124) 100%);
+    background: radial-gradient(rgb(0, 0, 255) 0%, rgb(0, 0, 255) 20%, rgb(0, 0, 124) 100%);
+    border: 5px solid rgb(94, 20, 163)
 }
 .green{
-    background: radial-gradient(rgb(0, 128, 0) 0%, rgb(0, 128, 0) 40%, rgb(0, 77, 0) 100%);
+    background: radial-gradient(rgb(0, 128, 0) 0%, rgb(0, 128, 0) 20%, rgb(0, 77, 0) 100%);
+    border: 5px solid rgb(94, 20, 163)
 }
 .victory{
     border: 5px solid rgb(197, 15, 197);

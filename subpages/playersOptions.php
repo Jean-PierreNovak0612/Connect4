@@ -18,14 +18,11 @@
 
         
         <!-- This is the code for the players options menu -->
-        <section class="w-75 mx-auto text-center my-5 plysoptions px-5">
-
-            <!-- The name of the application and game -->
-            <h1 class="w-100">Players options</h1>
+        <section class="w-75 mx-auto text-center my-3 plysoptions px-5">
 
             <?php if(isset($_GET['multy'])) : ?>
                 <!-- Selecting who goes first -->
-                <section class="firstTurn w-100 py-2 mt-3">
+                <section class="firstTurn w-100 py-2 mt-1">
                     <h3 class="plyGoesFirst">Select who goes first</h3>
                     <button id="ply1" class="btn selectWhoGoesFirst w-25 goesFirst">Player1</button>
                     <button id="ply2" class="btn selectWhoGoesFirst w-25">Player2</button>
@@ -34,10 +31,10 @@
 
             <?php if(isset($_GET['multy'])) : ?>
                 <!-- This section will contain the menu options -->
-                <section class="mt-5 pt-5 me-5 w-25 d-inline-block text-start">
+                <section class="mt-1 pt-5 me-5 w-25 d-inline-block text-start">
             <?php else : ?>
                 <!-- This section will contain the menu options -->
-                <section class="mt-5 pt-5 me-5 w-50 d-inline-block text-start">
+                <section class="mt-5 me-5 w-50 d-inline-block text-start">
             <?php endif ?>
 
                 <!-- Creating the options field for the first player -->
@@ -63,7 +60,7 @@
             </section>
 
             <?php if(isset($_GET['multy'])) : ?>
-                <section class="mt-5 pt-5 w-25 ms-5 d-inline-block text-start">
+                <section class="mt-1 w-25 ms-5 d-inline-block text-start">
 
                     <!-- Creating the options field for the first player -->
                     <label for="ply2name" class="form-label">Enter name for player 2:</label>
@@ -89,10 +86,10 @@
 
         <?php if(isset($_GET['multy'])) : ?>
             <!-- Button that allowes to start the game only when both players are ready -->
-            <button id="startmultiply" class="multiplay btn mt-5 border-3 border-dark rounded-pill py-2 px-5 mb-5 btn-danger" disabled>Start game!</button>
+            <button id="startmultiply" class="multiplay btn border-3 border-dark rounded-pill py-2 px-5 mb-5 btn-danger" disabled>Start game!</button>
         <?php else : ?>
             <!-- Button that allowes to start the game only when both players are ready -->
-            <button id="startsingleply" class="singleplay btn mt-5 border-3 border-dark rounded-pill py-2 px-5 mb-5 btn-danger" disabled>Start game!</button>
+            <button id="startsingleply" class="singleplay btn border-3 border-dark rounded-pill py-2 px-5 mb-5 btn-danger" disabled>Start game!</button>
         <?php endif ?>
     </main>
 </body>
