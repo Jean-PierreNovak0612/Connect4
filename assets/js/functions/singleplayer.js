@@ -51,24 +51,6 @@ function CheckIfEmpty(notFull){
     }
     return notFull;
 }
-function allFull(){
-    console.log('Got here')
-    var score = 0;
-    for(i=0; i<6; i++){
-        for(j=0; j<7; j++){
-            score += parseInt($('#'+i+''+j).val())
-        }
-    }
-    if(score == 126){
-        $('#display').text("It's a draw")
-        setTimeout(function(){
-            $('.gameboard').fadeOut(500);
-            setTimeout(function(){
-                $('.wpannel').fadeIn(500)
-            }, 500)
-        },1000);
-    } 
-}
 function checkRightDiagonal(){
     var placed = false;
     for(i=5;i>=3;i--){

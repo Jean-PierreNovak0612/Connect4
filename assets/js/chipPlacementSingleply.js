@@ -5,8 +5,11 @@ $(document).on('click', 'button.enterChip', function(){
     var j = parseInt(id%10);
     var color = localStorage.getItem('ply1Color');
     setPlayerChip(color, j);
-    notFull = CheckIfEmpty(notFull);
-    rowVictory(notFull)
     checkRow();
     notFull = CheckIfEmpty(notFull);
+    if($('.enterChip').prop('disabled') == false){
+        rowVictory(notFull)
+        checkRow();
+        notFull = CheckIfEmpty(notFull);
+    }
 })
