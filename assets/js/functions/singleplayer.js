@@ -201,7 +201,6 @@ function checkRow(){
     }
 }
 function rightDiagonal(notFull){
-    var placed = false;
     for(i=5;i>=2;i--){
         for(j=6;j>=2;j--){
             var score = 0;
@@ -215,8 +214,7 @@ function rightDiagonal(notFull){
                             $('#'+(i-s)+''+(j-s)).removeClass('enterChip');
                             $('#'+(i-s)+''+(j-s)).addClass('yellow');
                             $('#'+(i-s)+''+(j-s)).val('5')
-                            placed = true;
-                            break
+                            return;
                         }
                     }
                     else{
@@ -224,26 +222,16 @@ function rightDiagonal(notFull){
                             $('#'+(i-s)+''+(j-s)).removeClass('enterChip');
                             $('#'+(i-s)+''+(j-s)).addClass('yellow');
                             $('#'+(i-s)+''+(j-s)).val('5')
-                            placed = true;
-                            break
+                            return
                         }
                     }
                 }
             }
-            if(placed){
-                break;
-            }
-        }
-        if(placed){
-            break;
         }
     }
-    if(!placed){
-        setAIChip(notFull)
-    }
+    setAIChip(notFull)
 }
 function leftDiagonal(notFull){
-    var placed = false;
     for(i=5;i>=2;i--){
         for(j=0;j<5;j++){
             var score = 0;
@@ -257,8 +245,7 @@ function leftDiagonal(notFull){
                             $('#'+(i-s)+''+(j+s)).removeClass('enterChip');
                             $('#'+(i-s)+''+(j+s)).addClass('yellow');
                             $('#'+(i-s)+''+(j+s)).val('5')
-                            placed = true;
-                            break
+                            return
                         }
                     }
                     else{
@@ -266,26 +253,16 @@ function leftDiagonal(notFull){
                             $('#'+(i-s)+''+(j+s)).removeClass('enterChip');
                             $('#'+(i-s)+''+(j+s)).addClass('yellow');
                             $('#'+(i-s)+''+(j+s)).val('5')
-                            placed = true;
-                            break
+                            return
                         }
                     }
                 }
             }
-            if(placed){
-                break;
-            }
-        }
-        if(placed){
-            break;
         }
     }
-    if(!placed){
-        rightDiagonal(notFull)
-    }
+    rightDiagonal(notFull)
 }
 function column(notFull){
-    placed = false;
     for(i=0; i<7; i++){
         for(j=0; j<4; j++){
             var score = 0;
@@ -297,24 +274,14 @@ function column(notFull){
                     $('#'+s+''+i).removeClass('enterChip');
                     $('#'+s+''+i).addClass('yellow');
                     $('#'+s+''+i).val('5');
-                    placed = true;
-                    break;
+                    return;
                 }
-                if(placed){
-                    break;
-                }
-            }
-            if(placed){
-                break
             }
         }
     }
-    if(!placed){
-        leftDiagonal(notFull)
-    }
+    leftDiagonal(notFull)
 }
 function row(notFull){
-    placed = false;
     for(i=0; i<6; i++){
         for(j=0; j<5; j++){
             var score = 0;
@@ -328,33 +295,22 @@ function row(notFull){
                             $('#'+i+''+s).removeClass('enterChip');
                             $('#'+i+''+s).addClass('yellow');
                             $('#'+i+''+s).val('5');
-                            placed = true;
-                            break
+                            return
                         }
                     }
                     else if($('#'+i+''+s).val() == '0'){
                         $('#'+i+''+s).removeClass('enterChip');
                         $('#'+i+''+s).addClass('yellow');
                         $('#'+i+''+s).val('5');
-                        placed = true;
-                        break;
+                        return;
                     }
                 }
-                if(placed){
-                    break;
-                }
-            }
-            if(placed){
-                    break;
             }
         }
     }
-    if(!placed){
         column(notFull)
-    }
 } 
 function rightDiagonalVictory(notFull){
-    var placed = false;
     for(i=5;i>=3;i--){
         for(j=6;j>=3;j--){
             var score = 0;
@@ -368,8 +324,7 @@ function rightDiagonalVictory(notFull){
                             $('#'+(i-s)+''+(j-s)).removeClass('enterChip');
                             $('#'+(i-s)+''+(j-s)).addClass('yellow');
                             $('#'+(i-s)+''+(j-s)).val('5')
-                            placed = true;
-                            break
+                            return;
                         }
                     }
                     else{
@@ -377,26 +332,16 @@ function rightDiagonalVictory(notFull){
                             $('#'+(i-s)+''+(j-s)).removeClass('enterChip');
                             $('#'+(i-s)+''+(j-s)).addClass('yellow');
                             $('#'+(i-s)+''+(j-s)).val('5')
-                            placed = true;
-                            break
+                            return
                         }
                     }
                 }
             }
-            if(placed){
-                break;
-            }
-        }
-        if(placed){
-            break;
         }
     }
-    if(!placed){
-        row(notFull)
-    }
+    row(notFull)
 }
-function leftDiagonalVictory(notFull){  
-    var placed = false;
+function leftDiagonalVictory(notFull){
     for(i=5;i>=3;i--){
         for(j=0;j<4;j++){
             var score = 0;
@@ -410,8 +355,7 @@ function leftDiagonalVictory(notFull){
                             $('#'+(i-s)+''+(j+s)).removeClass('enterChip');
                             $('#'+(i-s)+''+(j+s)).addClass('yellow');
                             $('#'+(i-s)+''+(j+s)).val('5')
-                            placed = true;
-                            break
+                            return;
                         }
                     }
                     else{
@@ -419,26 +363,17 @@ function leftDiagonalVictory(notFull){
                             $('#'+(i-s)+''+(j+s)).removeClass('enterChip');
                             $('#'+(i-s)+''+(j+s)).addClass('yellow');
                             $('#'+(i-s)+''+(j+s)).val('5')
-                            placed = true;
-                            break
+                            return
                         }
                     }
                 }
             }
-            if(placed){
-                break;
-            }
-        }
-        if(placed){
-            break;
         }
     }
-    if(!placed){
-        rightDiagonalVictory(notFull)
-    }
+    rightDiagonalVictory(notFull)
+    
 }
 function columnVictory(notFull){
-    placed = false;
     for(i=0; i<7; i++){
         for(j=0; j<3; j++){
             var score = 0;
@@ -450,24 +385,14 @@ function columnVictory(notFull){
                     $('#'+s+''+i).removeClass('enterChip');
                     $('#'+s+''+i).addClass('yellow');
                     $('#'+s+''+i).val('5');
-                    placed = true;
-                    break;
+                    return;
                 }
-                if(placed){
-                    break;
-                }
-            }
-            if(placed){
-                break
             }
         }
     }
-    if(!placed){
-        leftDiagonalVictory(notFull)
-    }
+    leftDiagonalVictory(notFull)
 }
 function rowVictory(notFull){
-    placed = false;
     for(i=0; i<6; i++){
         for(j=0; j<4; j++){
             var score = 0;
@@ -481,25 +406,18 @@ function rowVictory(notFull){
                             $('#'+i+''+s).removeClass('enterChip');
                             $('#'+i+''+s).addClass('yellow');
                             $('#'+i+''+s).val('5');
-                            placed = true;
-                            break
+                            return;
                         }
                     }
                     else if($('#'+i+''+s).val() == '0'){
                         $('#'+i+''+s).removeClass('enterChip');
                         $('#'+i+''+s).addClass('yellow');
                         $('#'+i+''+s).val('5');
-                        placed = true;
-                        break;
+                        return;
                     }
-                }
-                if(placed){
-                    break;
                 }
             }
         }
     }
-    if(!placed){
-        columnVictory(notFull)
-    }
+    columnVictory(notFull)
 }
