@@ -143,7 +143,7 @@ function checkColumn(){
                     $('#display').text(localStorage.getItem('ply1Name')+" has won!")
                 }
                 else{
-                    $('#winner').text('Computer has won!')
+                    $('#display').text('Computer has won!')
                 }
                 setTimeout(function(){
                     $('.gameboard').fadeOut(500);
